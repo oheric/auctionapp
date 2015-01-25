@@ -1,1 +1,11 @@
-hi!
+<h1>Ebay Search</h1>
+
+<% @search.each do |s|%>
+<br>
+<%= s[1] %>
+<% end %>
+
+<%= form_tag root_path, :method => 'get' do %>
+    <%= text_field_tag :search %>
+    <%= submit_tag "Search", :name => nil %>
+<% end %>
