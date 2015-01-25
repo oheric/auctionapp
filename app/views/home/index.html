@@ -1,11 +1,18 @@
 <h1>Ebay Search</h1>
 
-<% @search.each do |s|%>
+<% if @item %>
+<% @item['findItemsByKeywordsResponse'].each do |i|%>
 <br>
-<%= s[1] %>
+<%= i['searchResult'][0]['item'][0]['title'][0]%>
+<br>
+<%= i['searchResult'][0]['item'][1]['title'][0]%>
+<br>
+<%= i['searchResult'][0]['item'][2]['title'][0]%>
+
+<% end %>
 <% end %>
 
 <%= form_tag root_path, :method => 'get' do %>
-    <%= text_field_tag :search %>
-    <%= submit_tag "Search", :name => nil %>
+    <%= text_field_tag :price %>
+    <%= submit_tag "Max Price", :name => nil %>
 <% end %>
