@@ -1,20 +1,33 @@
-<h1>Ebay Search</h1>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Five for Five</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+</head>
+<body>
+	<h1>Ebay Search</h1>
 
-<% if @item %>
-<% @item['findItemsByCategoryResponse'][0]['searchResult'][0]['item'].each do |i| %>
-<%= i['title'][0] %>
-<br>
-<a href=<%= i['viewItemURL'][0]%>><%= image_tag i['galleryURL'][0]%></a>
-<br>
-<%= number_to_currency(i['sellingStatus'][0]['currentPrice'][0]['__value__'])%>
-<br>
-<%= i['sellingStatus'][0]['timeLeft'][0]%>
-<br>
+
+
+
+	<% if @item %>
+	<% @item['findItemsByKeywordsResponse'][0]['searchResult'][0]['item'].each do |i| %>
+	<% i['title'][0] %>
+		<div class="col-xs-6 col-md-4"><a href=<%= i['viewItemURL'][0]%>><%= image_tag i['galleryURL'][0]%></a>
+	<%= number_to_currency(i['sellingStatus'][0]['currentPrice'][0]['__value__'])%></div>
+	<% i['sellingStatus'][0]['timeLeft'][0]%>
 
 <% end %>
 <% end %>
 
+<div id="maxprice">
 <%= form_tag root_path, :method => 'get' do %>
     <%= text_field_tag :price %>
-    <%= submit_tag "Max Price", :name => nil %>
+    <%= submit_tag ("Max Price") %>
 <% end %>
+</div>
+
+</body>
+</html>
+
+
