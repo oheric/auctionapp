@@ -3,23 +3,36 @@
 <head>
 	<title>Five for Five</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 </head>
-<body>
+<body style="background-color: #E0E0E0">
+
 	<h1>Ebay Search</h1>
 
 
 
-
+<div class="container-fluid">
+	<div class="row">
 	<% if @item %>
 	<% @item['findItemsByKeywordsResponse'][0]['searchResult'][0]['item'].each do |i| %>
-	<% i['title'][0] %>
-		<div class="col-xs-6 col-md-4"><a href=<%= i['viewItemURL'][0]%>><%= image_tag i['galleryURL'][0]%></a>
-	<%= number_to_currency(i['sellingStatus'][0]['currentPrice'][0]['__value__'])%></div>
-	<%= i['sellingStatus'][0]['timeLeft'][0]%>
-<% end %>
-<% end %>
-<%= DateTime.now%>
-<%= DateTime.now + 5.minutes%>
+		<div class="col-xs-3">
+			<div class="itempic">
+				<a href=<%= i['viewItemURL'][0]%>><%= image_tag i['galleryURL'][0]%></a>
+			</div>
+			<div class="itemtitle">
+				<%= i['title'][0] %>
+			</div>
+			<div class="itemprice">
+				<%= number_to_currency(i['sellingStatus'][0]['currentPrice'][0]['__value__'])%>
+			</div>
+			<div class="timeremaining">
+				<%= i['sellingStatus'][0]['timeLeft'][0]%>
+			</div>
+		</div>
+		<% end %>
+		<% end %>
+	</div>
+</div>
 
 <div id="maxprice">
 <%= form_tag root_path, :method => 'get' do %>
