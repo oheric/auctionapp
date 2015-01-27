@@ -2,8 +2,6 @@
 <html>
 <head>
 	<title>Five for Five</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 </head>
 <body style="background-color: #E0E0E0">
 
@@ -35,7 +33,7 @@
 </div>
 
 <div id="maxprice">
-<%= form_tag root_path, :method => 'get' do %>
+<%= form_tag wclothing_path, :method => 'get' do %>
     <%= text_field_tag :price %>
     <%= submit_tag ("Max Price") %>
 <% end %>

@@ -20,11 +20,20 @@ h1{
 	font-family: 'Open Sans Condensed', sans-serif;
 }
 
-html{
-	background-color: #E0E0E0;
+.intro{
+	font-family: 'Lobster', cursive;
+	margin: 300px 400px 400px 400px;
+	font-size: 36px;
+	text-align: center;
+	color: white;
 }
 
 .container-fluid{
 	background-color: #E0E0E0;
 	margin: auto
+}
+
+body{
+	background: #000000 url("http://www.eternaladoptions.org/sites/default/files/Spots-Background-Light-Bright-Pale.jpg");
+	background-size: cover;
 }
