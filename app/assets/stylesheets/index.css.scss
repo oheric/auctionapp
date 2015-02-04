@@ -1,19 +1,62 @@
 h1{
 	font-family: 'Open Sans Condensed', sans-serif;
+	text-align: center;
 }
 
-.col-xs-3{
+#maxprice{
+	float: right;
+	padding: 30px 10px 0px 0px
+}
+
+#recent{
+	float: right
+}
+
+.col-md-2{
 	text-align: center;
 	margin: 4px;
 	box-shadow: 0px 1px 5px #888888;
 	background-color: white;
 	border-radius: 5px;
 	height: 100%;
-	width: 100%
+	width: 100%;
 }
 
 .itempic{
 	padding-top: 6px;
+}
+
+.logo{
+	height: 130px;
+	width: 130px;
+	margin-top: 80px
+	// padding: 20px 0px 0px 24px;
+	// border: 1px solid black;	
+}
+
+.podium{
+	height: 70px;
+	width: 60px;
+	// padding: 6px 0px 6px 6px
+	margin-left: 16px;
+	padding-top: 6px;
+	padding-bottom: 6px
+}
+
+.button{
+	background: url(http://www.uptoyouth.fr/wp-content/uploads/2014/05/white-and-blue-glow_original.jpg) center;
+	width: 180px;
+	height: 40px;
+	font-size: 24px;
+	// position: relative;
+	margin: auto;
+	text-align: center;
+	border-radius: 5px;
+	color: white;
+	font-family: Helvetica;
+	padding-top: 10px;
+	color: gray;
+	border: 1px solid gray;
 }
 
 .itemtitle{
@@ -22,18 +65,36 @@ h1{
 
 .intro{
 	font-family: 'Lobster', cursive;
-	margin: 300px 400px 400px 400px;
+	margin-top: 50px;
 	font-size: 36px;
 	text-align: center;
 	color: white;
+	height: 100px
 }
 
 .container-fluid{
 	background-color: #E0E0E0;
-	margin: auto
+	margin-left: 400px
 }
 
 body{
 	background: #000000 url("http://www.eternaladoptions.org/sites/default/files/Spots-Background-Light-Bright-Pale.jpg");
 	background-size: cover;
+}
+
+.col-md-8{
+	height: 200px;
+	width: 300px;
+	background: url(http://www.uptoyouth.fr/wp-content/uploads/2014/05/white-and-blue-glow_original.jpg) center;
+	text-align: center;
+	margin: auto;
+	font-size: 18px;
+	padding-top: 60px
+	}
+.col-md-4{
+	// background-image: url(http://cdn.sheknows.com/articles/crave/closet-clothes-donate-600.jpg);
+	height: 200px;
+	width: 400px;
+	font-size: 18px;
+	color: white
 }
