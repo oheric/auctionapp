@@ -4,7 +4,7 @@
 	<title></title>
 </head>
 
-<header class="navbar navbar-fixed-top navbar-default">
+<header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
     <%= link_to "CattleRattle", refresh_path, id: "logo" %>
     <nav>
@@ -37,7 +37,7 @@
 	  		<%= number_to_currency(i['sellingStatus'][0]['currentPrice'][0]['__value__'])%>
 	  	</div>
 	  	<div class="timeremaining">
-	  		<% i['sellingStatus'][0]['timeLeft'][0]%>
+	  		<%= i['sellingStatus'][0]['timeLeft'][0]%>
 	  	</div>
 	  </div>
 	  <% end %>
