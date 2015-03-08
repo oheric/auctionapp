@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.8'
 
 gem 'mongoid'
+gem 'bootstrap-sass'
 
 gem 'httparty'
 # Use SCSS for stylesheets

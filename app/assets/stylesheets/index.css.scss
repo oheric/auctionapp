@@ -1,37 +1,109 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+	padding-top: 60px;
+	background: url("http://www.eternaladoptions.org/sites/default/files/Spots-Background-Light-Bright-Pale.jpg");
+	background-size: cover;
+}
+
+#wrapper {
+	width: 90%;
+	max-width: 1100px;
+	min-width: 800px;
+	margin: 50px auto;
+	text-align: center
+}
+
+#columns {
+	-webkit-column-count: 3;
+	-webkit-column-gap: 10px;
+	-webkit-column-fill: auto;
+	-moz-column-count: 3;
+	-moz-column-gap: 10px;
+	-moz-column-fill: auto;
+	column-count: 3;
+	column-gap: 15px;
+	column-fill: auto;
+}
+
+.pin {
+	display: inline-block;
+	background: #FEFEFE;
+	border: 2px solid #FAFAFA;
+	border-radius: 5px;
+	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+	margin: 0 2px 15px;
+	-webkit-column-break-inside: avoid;
+	-moz-column-break-inside: avoid;
+	column-break-inside: avoid;
+	padding: 15px;
+	padding-bottom: 5px;
+	background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
+	opacity: 1;
+	
+	-webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-o-transition: all .2s ease;
+	transition: all .2s ease;
+}
+
+.pin a {
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 15px;
+	margin-bottom: 5px;
+}
+
+.bottom {
+	font: 12px/18px Arial, sans-serif;
+	color: #333;
+	margin: 0;
+}
+
+@media (min-width: 960px) {
+	#columns {
+		-webkit-column-count: 4;
+		-moz-column-count: 4;
+		column-count: 4;
+	}
+}
+
+@media (min-width: 1100px) {
+	#columns {
+		-webkit-column-count: 5;
+		-moz-column-count: 5;
+		column-count: 5;
+	}
+}
+
+#columns:hover .pin:not(:hover) {
+	opacity: 0.4;
+}
+
 h1{
 	font-family: 'Open Sans Condensed', sans-serif;
 	text-align: center;
 }
 
 #maxprice{
-	float: right;
-	padding: 30px 10px 0px 0px
+	float: left;
+  margin-right: 10px;
+  font-size: 1.1em;
+  color: black;
+  letter-spacing: -1px;
+  padding-top: 12px;
 }
 
-#recent{
-	float: right
-}
-
-.col-md-2{
-	text-align: center;
-	margin: 4px;
-	box-shadow: 0px 1px 5px #888888;
-	background-color: white;
-	border-radius: 5px;
-	height: 100%;
-	width: 100%;
-}
-
-.itempic{
-	padding-top: 6px;
-}
-
-.logo{
-	height: 130px;
-	width: 130px;
-	margin-top: 80px
-	// padding: 20px 0px 0px 24px;
-	// border: 1px solid black;	
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
 }
 
 .podium{
@@ -75,11 +147,6 @@ h1{
 .container-fluid{
 	background-color: #E0E0E0;
 	margin-left: 400px
-}
-
-body{
-	background: #000000 url("http://www.eternaladoptions.org/sites/default/files/Spots-Background-Light-Bright-Pale.jpg");
-	background-size: cover;
 }
 
 .col-md-8{

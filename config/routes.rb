@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'wclothing/index' => 'wclothing#index', as: :wclothing
 
   get 'home/show' => 'home#show', as: :homeshow
+
+  get '/cattlerattle' => 'wclothing#refresh', as: :refresh
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

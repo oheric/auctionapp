@@ -3,26 +3,33 @@
 <head>
 	<title></title>
 </head>
-<body style="background-color: #E0E0E0">
 
-  <img class ="podium" src="/assets/podium.png">
-
-<div id="maxprice">
+<header class="navbar navbar-fixed-top navbar-default">
+  <div class="container">
+    <%= link_to "CattleRattle", refresh_path, id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+ 
+        <div id="maxprice">
   <%= form_tag wclothing_path, :method => 'get' do %>
     <%= text_field_tag :price %>
-    <%= submit_tag ("Max Price") %>
+    <%= submit_tag ("New Max Price") %>
   <% end %>
 </div>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-
-<div class="container-fluid">
-  <div class="row">
+<body>
+<div id="wrapper">
+  <div id="columns">
     <% if @item %>
 	<% @item['findItemsByKeywordsResponse'][0]['searchResult'][0]['item'].each do |i| %>
-	  <div class="col-md-2">
-	  	<div class="itempic">
+	  <div class="pin">
+	  	
 	  		<a href=<%= i['viewItemURL'][0]%>><%= image_tag i['galleryURL'][0]%></a>
-	  	</div>
+	  
 	  	<div class="itemtitle">
 	  		<%= i['title'][0] %>
 	  	</div>
@@ -37,14 +44,6 @@
 	  <% end %>
 	</div>
 </div>
-<div id="recent">Recent Items:</div>
-
-<!-- <div id="maxprice">
-<%= form_tag wclothing_path, :method => 'get' do %>
-    <%= text_field_tag :price %>
-    <%= submit_tag ("Max Price") %>
-<% end %>
-</div> -->
 
 </body>
 </html>
