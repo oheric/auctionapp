@@ -4,7 +4,7 @@
 body {
 	padding-top: 60px;
 	background: url(http://www.woodwardmedical.com/wp-content/uploads/2013/12/Blue_Background_big_2048.png);
-	background-size: 120%;
+	background-size: 180%;
 }
 
 #wrapper {
@@ -132,6 +132,11 @@ h1{
 	text-align: center;
 	color: white;
 	height: 100px
+}
+
+.button{
+	font-style: italic;
+	text-align: center;
 }
 
 .container-fluid{
