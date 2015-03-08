@@ -24,12 +24,10 @@
 <body>
 <div id="wrapper">
   <div id="columns">
-    <% if @item %>
+  <% if @item %>
 	<% @item['findItemsByKeywordsResponse'][0]['searchResult'][0]['item'].each do |i| %>
 	  <div class="pin">
-	  	
-	  		<a href=<%= i['viewItemURL'][0]%>><%= image_tag i['galleryURL'][0]%></a>
-	  
+	  	<a href=<%= i['viewItemURL'][0]%>><%= image_tag i['galleryURL'][0]%></a>
 	  	<div class="itemtitle">
 	  		<%= i['title'][0] %>
 	  	</div>
