@@ -69,6 +69,6 @@ test:
         retry_interval: 0
 
 production:
-  sessions:
-    default:
-      uri: <%= ENV['MONGOLAB_URL'] %>
+    sessions:
+      default:
+        uri: <%= ENV['MONGOHQ_URL'] %>
